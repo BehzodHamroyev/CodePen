@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/logo.png">
+    <title>CodePen</title>
+</head>
+
+<body>
+    <header class="shadow d-flex justify-content-between px-4 py-2">
+        <a href="https://github.com/BehzodHamroyev/newTelegramUI"><img src="img/logo.png" class="logo" alt=""></a>
+        <div class="componenta">
+            <a class="btn rounded btn-componenta"> <i class="fas fa-cloud pe-2   "></i> Save</a>
+            <a onclick="openModal()" class="btn rounded btn-componenta"><i class="fas fa-cog pe-2 "></i> Settings</a>
+            <div id="settings" class="container-fluid">
+                <div class="layout">
+                    <div class="header px-2">
+                        <div class="title">
+                            <p class="mt-2">Pen Settings</p>
+                            <button onclick="closeModal()" class="btn  px-2 py-1 text-white rounded close"><i
+                                    class="fas fa-times fa-x"></i></button>
+                        </div>
+                        <div class="line">
+                            <div class="line1"></div>
+                            <div class="line2"></div>
+                        </div>
+                    </div>
+                    <section>
+                        <div class="sidebar">
+                            <ul id="ul">
+                                <li id="li1" class="li">
+                                    <a href="#">HTML</a>
+                                </li>
+                                <li id="li2" class="li">
+                                    <a href="#">CSS</a>
+                                </li>
+                                <li id="li3" class="li">
+                                    <a href="#">JavaScript</a>
+                                </li>
+                                <br>
+                                <li id="li4" class="li">
+                                    <a href="#">Pen Details</a>
+                                </li>
+                                <li id="li5" class="li">
+                                    <a href="#">
+                                        Privacy</a>
+                                </li>
+                                <li id="li6" class="li">
+                                    <a href="#">Behavior</a>
+                                </li>
+                                <li id="li7" class="li">
+                                    <a href="#">Editor</a>
+                                </li>
+                                <li id="li8" class="li">
+                                    <a href="#">Template</a>
+                                </li>
+                                <li id="li9" class="li">
+                                    <a href="#">Screenshot</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="body">
+                            <div id="html" >
+                                <div class="input-container mt-3">
+                                    <label for="select" class="form-label text-white">HTML Preprocessor</label>
+                                    <select class="form-select" id="select" aria-label="Default select example">
+                                        <option selected>None</option>
+                                        <option value="1">Haml</option>
+                                        <option value="2">Markdown</option>
+                                        <option value="3">Slim</option>
+                                        <option value="3">Slim</option>
+                                    </select>
+                                </div>
+                                <div class="input-container mt-3">
+                                    <label for="Input1" class="form-label text-white">Add Class(es) to
+                                        <b>html</b>
+                                    </label>
+                                    <input class="form-control" id="Input1" type="text">
+                                </div>
+                                <div class="input-container mt-3">
+                                    <label class="text-white mb-2" for="textarea">Stuff for <b>head</b></label>
+                                    <div class="form-floating">
+                                        <textarea class="form-control bg-white" placeholder="Leave a comment here"
+                                            id="textarea" style="height: 100px"></textarea>
+                                        <!-- <label for="floatingTextarea2">Comments</label> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="css">
+                                <div class="input-container mt-3">
+                                    <label for="select" class="form-label text-white">HTML Preprocessor</label>
+                                    <select class="form-select" id="select" aria-label="Default select example">
+                                        <option selected>None</option>
+                                        <option value="1">Sass</option>
+                                        <option value="2">Less</option>
+                                        <option value="3">Stylus</option>
+                                        <option value="3">SCSS</option>
+                                        <option value="3">PostCss</option>
+                                    </select>
+                                </div>
+                                <div class="input-container mt-3">
+                                    <label for="Input1" class="form-label text-white">CSS Base
+                                    </label>
+                                    <div class="form-check">
+                                        <input class="form-check-input " type="radio" name="Base"
+                                            id="flexRadioDefault1">
+                                        <label class="form-check-label text-white" for="flexRadioDefault1">
+                                            Normalize
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input " type="radio" name="Base"
+                                            id="flexRadioDefault2">
+                                        <label class="form-check-label text-white" for="flexRadioDefault2">
+                                            Reset
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input " type="radio" name="Base" id="flexRadioDefault3"
+                                            checked>
+                                        <label class="form-check-label text-white" for="flexRadioDefault3">
+                                            Neither
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="input-container mt-3">
+                                    <label class="text-white mb-2" for="Vendor">Vendor Prefixing</label>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="Vendor"
+                                            id="flexRadioDefault4">
+                                        <label class="form-check-label text-white" for="flexRadioDefault4">
+                                            Autoprefixer
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="Vendor"
+                                            id="flexRadioDefault5">
+                                        <label class="form-check-label text-white" for="flexRadioDefault5">
+                                            Prefixfree
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="Vendor"
+                                            id="flexRadioDefault6" checked>
+                                        <label class="form-check-label text-white" for="flexRadioDefault6">
+                                            Neither
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="input-container mt-3">
+                                    <h3 class="text-white">Add External Stylesheets/Pens</h3>
+                                    <p class="text-white">Any URL's added here will be added as
+                                        <b>Link</b>s in order, and before the CSS in the editor. If you link to another
+                                        Pen,
+                                        it will include the CSS from that Pen. If the preprocessor matches, it will
+                                        attempt to combine them before processing.
+                                    </p>
+                                    <label class="text-white mb-2" for="Vendor">Vendor Prefixing</label>
+                                    <div class="input-group mb-3">
+                                        <button class="btn btn-outline-secondary" type="button" id="button-addon1"><i
+                                                class="fas fa-search    "></i></button>
+                                        <input type="text" class="form-control" placeholder=""
+                                            aria-label="Example text with button addon"
+                                            aria-describedby="button-addon1">
+                                    </div>
+                                </div>
+                                <div id="anotherLinkCss">
+                                    <!-- <div id="idCss0" class="input-container">
+                                        <div  class="link-container d-flex align-items-center">
+                                            <i class="fas fa-bars text-white "></i>
+                                            <input type="text" class="form-control mx-2" placeholder=""
+                                                aria-label="Example text with button addon"
+                                                aria-describedby="button-addon1">
+                                            <button class="btn btn-outline-success me-2">
+                                                <i class="fas fa-check  text-white  "></i>
+                                            </button>
+                                            <button class="btn btn-outline-danger">
+                                                <i class="fas fa-times  text-white "></i>
+                                            </button>
+                                        </div>
+                                    </div> -->
+                                </div>
+                                <div onclick="newLinkCss()" class="input-container"><button class="btn btn-secondary">Add another resource</button></div>
+                            </div>
+                            <div id="js" >
+                                <div class="input-container mt-3">
+                                    <label for="select" class="form-label text-white">HTML Preprocessor</label>
+                                    <select class="form-select" id="select" aria-label="Default select example">
+                                        <option selected>None</option>
+                                        <option value="1">Sass</option>
+                                        <option value="2">Less</option>
+                                        <option value="3">Stylus</option>
+                                        <option value="3">SCSS</option>
+                                        <option value="3">PostCss</option>
+                                    </select>
+                                </div>
+
+                                <div class="input-container mt-3">
+                                    <h3 class="text-white">Add External Scripts/Pens</h3>
+                                    <p class="text-white">
+                                        Any URL's added here will be added as <b>scripts</b> in order, and run before
+                                        the JavaScript in the editor. You can use the URL of any other Pen and it will
+                                        include the JavaScript from that Pen.
+                                    </p>
+                                    <label class="text-white mb-2" for="Vendor">Vendor Prefixing</label>
+                                    <div class="input-group mb-3">
+                                        <button class="btn btn-outline-secondary" type="button" id="button-addon1"><i
+                                                class="fas fa-search    "></i></button>
+                                        <input type="text" class="form-control" placeholder=""
+                                            aria-label="Example text with button addon"
+                                            aria-describedby="button-addon1">
+                                    </div>
+                                </div>
+                           <div id="anotherLinkJs">
+                            <!-- <div id="idJs0" class="input-container">
+                                <div class="link-container d-flex align-items-center">
+                                    <i class="fas fa-bars text-white "></i>
+                                    <input type="text" class="form-control mx-2" placeholder=""
+                                        aria-label="Example text with button addon"
+                                        aria-describedby="button-addon1">
+                                    <button class="btn btn-outline-success me-2">
+                                        <i class="fas fa-check  text-white  "></i>
+                                    </button>
+                                    <button onclick="removeJSLink(0)" class="btn btn-outline-danger">
+                                        <i class="fas fa-times  text-white "></i>
+                                    </button>
+                                </div>
+                            </div> -->
+                           </div>
+                                <div onclick="newLinkJs()" class="input-container"><button class="btn btn-secondary">Add another
+                                        resource</button></div>
+                                <div class="input-container  mt-3">
+                                    <h3 class="text-white">Add Packages</h3>
+                                    <p class="text-white">
+
+                                        Search for and use JavaScript packages from npm here. By selecting a package, an
+                                        import statement will be added to the top of the JavaScript editor for this
+                                        package.
+                                    </p>
+                                    <label class="text-white mb-2" for="Vendor">Vendor Prefixing</label>
+                                    <div class="input-group mb-3">
+                                        <button class="btn btn-outline-secondary" type="button" id="button-addon1"><i
+                                                class="fas fa-search    "></i></button>
+                                        <input type="text" class="form-control" placeholder=""
+                                            aria-label="Example text with button addon"
+                                            aria-describedby="button-addon1">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </section>
+
+                    <div class="footer d-flex justify-content-end px-3"><button onclick="closeModal()"
+                            class="btn btn-success px-2 my-3 py-1">Close</button></div>
+                </div>
+            </div>
+            <a class="btn rounded btn-componenta"><i class="fas fa-eye pe-2 "></i>Change View</a>
+            <a href="https://codepen.io/accounts/signup/user/free" class="btn rounded btn-componenta bg-success">Sing
+                Up</a>
+            <a href="https://codepen.io/login" class="btn rounded btn-componenta">Log In</a>
+        </div>
+    </header>
+    <ul class="nav nav-pills my-3 px-5" id="pills-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
+                type="button" role="tab" aria-controls="pills-home" aria-selected="true">HTML</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
+                type="button" role="tab" aria-controls="pills-profile" aria-selected="false">CSS</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact"
+                type="button" role="tab" aria-controls="pills-contact" aria-selected="false">JavaScript</button>
+        </li>
+        <!-- <li class="nav-item" role="presentation">
+            <button class="nav-link bg-info" id="pills-contact-tab" data-bs-toggle="pill"
+                data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact"
+                aria-selected="false">Run</button>
+        </li> -->
+    </ul>
+    <div class="container-fluid">
+        <div class="row px-3 m-0">
+            <div class="col-md-6">
+                <div>
+                    <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                            aria-labelledby="pills-home-tab">
+                            <div class="form-floating">
+                                <textarea onchange="chageCode()" class="form-control" placeholder="Leave"
+                                    id="htmlTextarea"></textarea>
+
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-profile" role="tabpanel"
+                            aria-labelledby="pills-profile-tab">
+                            <div class="form-floating">
+                                <textarea onchange="chageCode()" class="form-control" placeholder="Leave a comment here"
+                                    id="cssTextarea"></textarea>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-contact" role="tabpanel"
+                            aria-labelledby="pills-contact-tab">
+                            <div class="form-floating">
+                                <textarea onchange="chageCode()" class="form-control" placeholder="Leave a comment here"
+                                    id="jsTextarea"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="h-100">
+                    <p class="text-white result"> Resalt</p>
+                    <iframe id="result" frameborder="0"></iframe>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
